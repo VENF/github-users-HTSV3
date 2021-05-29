@@ -1,17 +1,3 @@
-// Icons
-export {
-  IconAddUser,
-  IconCategory,
-  IconEmail,
-  IconGame,
-  IconHome,
-  IconLogout,
-  IconProfile,
-  IconCard,
-  IconLockRounded,
-  IconInfoCircle
-} from "./Icons"
-
 // Layouts
 export { Layout } from "./Layouts"
 
