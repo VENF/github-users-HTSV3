@@ -18,17 +18,22 @@ export const Login = () => {
     setTimeout(() => {
       const db = window.localStorage.getItem("users")
       const users = JSON.parse(db)
-      const user = users.filter((x) => x.email === data.email)
-      if (user.length === 0) {
-        setErrors("Usuario no encontrado")
+      if(!users){
+        setErrors("Rgistrese antes de continuar")
         setLoading(false)
       } else {
-        if (user[0].password === data.password) {
-          window.localStorage.setItem("user", JSON.stringify(data))
-          router.push("/repositorys")
-        } else {
-          setErrors("Contraseña incorrecta")
+        const user = users.filter((x) => x.email === data.email)
+        if (user.length === 0) {
+          setErrors("Usuario no encontrado")
           setLoading(false)
+        } else {
+          if (user[0].password === data.password) {
+            window.localStorage.setItem("user", JSON.stringify(data))
+            router.push("/repositorys")
+          } else {
+            setErrors("Contraseña incorrecta")
+            setLoading(false)
+          }
         }
       }
     }, 2000)
