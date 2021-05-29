@@ -1,0 +1,1 @@
+export { getRepositorys, getProfile } from "./FetchGithub"
