@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import Link from "next/link"
-import { Layout } from "@components"
+import { Layout } from "components"
 import { TextField, Typography, CircularProgress } from "@material-ui/core"
 import { useForm, Controller } from "react-hook-form"
 // styles

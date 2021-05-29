@@ -6,12 +6,11 @@ import { getRepositorys, getProfile } from "services"
 import {
   Grid,
   TextField,
-  InputAdornment,
   Typography,
   CircularProgress,
   Button,
 } from "@material-ui/core"
-import { IconProfile, RepositoryCard, ProfileCard } from "components"
+import { RepositoryCard, ProfileCard } from "components"
 // styles
 import { useStyles } from "./style"
 
@@ -93,13 +92,6 @@ export const Repositorys = () => {
                 label="Ingrese su user de github"
                 variant="outlined"
                 fullWidth
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <IconProfile width="20px" color="#5F48D5" />
-                    </InputAdornment>
-                  ),
-                }}
               />
             )}
           />
